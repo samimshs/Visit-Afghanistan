@@ -1,0 +1,205 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F8F8F8;
+    color: #333;
+}
+
+/* Add spacing between sections */
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 50px;
+}
+
+/* Section 1: Hero Section */
+.hero-section {
+    background: url('Images/back.jpeg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-text {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Section 2: Activities Section */
+.activities-section {
+    background-color: #F4F4F4;
+    text-align: center;
+}
+
+.activities-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.activities-grid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+.activity {
+    width: 220px;
+    text-align: center;
+}
+
+.activity img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+}
+
+.activity img:hover {
+    transform: scale(1.1);
+}
+
+.activity h3 {
+    margin-top: 15px;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.activity p {
+    font-size: 0.95em;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Section 3: Guide Section */
+.guide-section {
+    background-color: #FFF;
+    padding: 50px;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.guide-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.guide-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 4px solid #457B7D
+}
+
+.guide-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.guide-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.guide-info p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Section 4: Contact Us Section */
+.contact-section {
+    background-color: #FFF;
+    padding: 50px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto; /* Centering the form */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for a clean effect */
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom:50px
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    text-align: left;
+    font-size: 1.1em;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Response Message Styling */
+#formResponse {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: green;
+}

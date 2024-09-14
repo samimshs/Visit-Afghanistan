@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visit Afghanistan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Section 1: Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>Visit Afghanistan</h1>
+            <p>Enjoy culture and adventure in this vibrant country close to the heart of Asia.</p>
+        </div>
+    </section>
+
+    <!-- Section 2: Activities Section -->
+    <section class="activities-section">
+        <h2>Top three activities to do</h2>
+        <div class="activities-grid">
+            <div class="activity">
+                <img src="Images/bamyan.jpg" alt="Bamyan">
+                <h3>Bamyan</h3>
+                <p>A wonderful place for sightseeing.</p>
+            </div>
+            <div class="activity">
+                <img src="Images/herat.jpg" alt="Herat">
+                <h3>Herat</h3>
+                <p>Explore the rich history of Herat.</p>
+            </div>
+            <div class="activity">
+                <img src="Images/ghor.jpg" alt="Ghor">
+                <h3>Ghor</h3>
+                <p>Enjoy the breathtaking mountains of Ghor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Guide Section -->
+    <section class="guide-section">
+        <div class="guide-card">
+            <img src="Images/samicar.png" alt="Sami Samim">
+            <div class="guide-info">
+                <h2>Your Guide</h2>
+                <h3>Sami Samim</h3>
+                <p>"Sami is an experienced guide who knows Afghanistan in and out."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Contact Us Section -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm" action="https://script.google.com/macros/s/AKfycby919e9dCR_c1Zv-nV0-cAT3oirWb3P7CXp7XCLBf03ieMaJiCzEVOC2HTzEX000aabpg/exec" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="formResponse"></div>
+    </section>
+
+    <!-- Optional JavaScript for Feedback Message -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            }).then(response => response.text())
+              .then(text => {
+                  document.getElementById('formResponse').textContent = "Thank you for your message!";
+                  form.reset();
+              })
+              .catch(error => {
+                  document.getElementById('formResponse').textContent = "Something went wrong. Please try again.";
+              });
+        });
+    </script>
+
+</body>
+</html>
