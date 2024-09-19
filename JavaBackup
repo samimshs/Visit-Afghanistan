@@ -304,33 +304,10 @@ function updateCartCount() {
 }
 
 // Function to toggle cart details display
-// Function to toggle cart details display
 function toggleCartDetails() {
     const cartContainer = document.getElementById('cart-container');
-    const overlay = document.getElementById('overlay');
     cartContainer.classList.toggle('show');
-    overlay.classList.toggle('show');
 }
-
-// Close cart when clicking outside (if you prefer)
-document.addEventListener('click', function(event) {
-    const cartContainer = document.getElementById('cart-container');
-    const cartIcon = document.querySelector('.cart-icon');
-    const overlay = document.getElementById('overlay');
-    if (
-        !cartContainer.contains(event.target) &&
-        !cartIcon.contains(event.target) &&
-        cartContainer.classList.contains('show')
-    ) {
-        cartContainer.classList.remove('show');
-        overlay.classList.remove('show');
-    }
-});
-
-// Prevent event propagation when clicking inside the cart
-document.getElementById('cart-container').addEventListener('click', function(event) {
-    event.stopPropagation();
-});
 
 function removeFromCart(cartItemId, itemTotalPrice, itemQuantity) {
     const cartItem = document.getElementById(cartItemId);

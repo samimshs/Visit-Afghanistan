@@ -98,7 +98,7 @@
     <!-- Cart Container (Initially Hidden) -->
     <div id="cart-container">
         <span class="close-cart" onclick="toggleCartDetails()">&times;</span>
-        <h3>Shopping Cart</h3>
+        <h2>Shopping Cart</h2>
         <p id="empty-cart-message" style="text-align: center; font-style: italic;">Your cart is empty.</p>
         <ul id="cart-items"></ul>
         <div id="cart-total">
@@ -482,8 +482,6 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         
     <script src="script.js"></script>
-    <!-- Overlay -->
-    <div id="overlay" onclick="toggleCartDetails()"></div>
 
 </body>
 </html>
